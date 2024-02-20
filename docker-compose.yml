@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: web
+    expose:
+      - "8006"
+    ports:
+      - "8006:80"
+    networks:
+      - internal
+
+
+networks:
+  internal:
+
